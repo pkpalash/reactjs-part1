@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>React JS | Basic</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://s3.amazonaws.com/media-p.slid.es/uploads/alexanderfarennikov/images/1198519/reactjs.png">
 
-<!-- reactjs cdn file added -->
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>React JS | Basic</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://s3.amazonaws.com/media-p.slid.es/uploads/alexanderfarennikov/images/1198519/reactjs.png">
 
-  </head>
-  <body>
-    <h2>Basic react js</h2>
+  <!-- reactjs cdn file added -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="pkreactjs.js"></script>
+</head> <!-- end hear section -->
 
-    <!-- reactjs code start -->
-    <div id="root"></div>
-    <script type="text/babel">
+<body>
+  <h1>Basic react js</h1>
+  <button onclick="clicking()">JavaScript Check</button>
+  <br>
 
-      ReactDOM.render(
-        <h1>Hello, world</h1>,
-        document.getElementById('root')
-      );
+  <div id="root"></div>
 
-    </script>
-  </body>
+
+  <script type="text/babel">
+
+    function HelloWorld(props){
+      return(
+          <div>
+            <h2>Hello {props.name}. age: {props.age}. adult: {props.adult}</h2>
+          </div>
+        );
+    }
+
+    ReactDOM.render(
+        <div>
+          <HelloWorld name="Palash" age="25" adult="Yes"/>
+          <HelloWorld name="Robin" age="28" adult="Yes"/>
+          <HelloWorld name="Sajjad" age="20" adult="No"/>
+        </div>,
+
+
+    document.getElementById('root')
+    );
+
+  </script>
+</body>
+
 </html>
